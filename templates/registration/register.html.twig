@@ -3,7 +3,13 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
+<!-------------------------------------------------"BEGINNING OF  INSCRIPTION MAIN"-------------------------------------------->
+<main id="mainInscription">
+    <div id="containerInscription">
+        <!------------------------------------Titre de la page-------------------------------------------------------->
+        <div id="Inscription">
+            <h1 class="h1Titre">Je m'inscris</h1>
+            <!-------------------------------------Formulaire d'inscription---------------------------------------------------->
 
     {{ form_errors(registrationForm) }}
 
@@ -20,4 +26,19 @@
 
         <button type="submit" class="btn">Register</button>
     {{ form_end(registrationForm) }}
+<!-------------------------------Ligne verte separatrice---------------------------------------------------------->
+            <hr>
+            <br>
+            <a class="aInsc" href="http://localhost/soeureinement/pages/connexion.php">
+                J'ai déjà un compte?
+            </a>
+            <br>
+        </div>
+    </div>
+    <!-----------------------------------Image inscription------------------------------------------------------>
+    <figure class="imgConnex">
+        <img src="http://localhost/soeureinement/img/photoConnexion2.png" alt="Image connexion un prés vert">
+    </figure>
+</main>
+<!---------------------------------------------------"END OF  MAIN"-------------------------------------------->
 {% endblock %}

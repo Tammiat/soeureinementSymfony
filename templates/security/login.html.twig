@@ -13,8 +13,13 @@
             You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
         </div>
     {% endif %}
-
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <main id="mainConnexion">
+    <!-------------container de tous les divs---------------------------------------------------------------------------->
+    <div id="container">
+        <div id="conInsc">
+            <!------------------------------------Titre de la page-------------------------------------------------------->
+            <h1 class="h1Titre">Je me connecte</h1>
+            <!------------------------------------Formulaire de connexion------------------------------------>
     <label for="inputMailUser">Mail User</label>
     <input type="text" value="{{ last_username }}" name="mailUser" id="inputMailUser" class="form-control" autocomplete="username" required autofocus>
     <label for="inputPassword">Password</label>
@@ -27,5 +32,22 @@
     <button class="btn btn-lg btn-primary" type="submit">
         Sign in
     </button>
+        <a class="modifMdp" href="">
+                Modifier mot de passe
+            </a>
+            <!-------------------------------------Ligne vert qui separe mdp du boutton ------------------------>
+            <hr>
+            <p>Je n'ai pas encore de compte?</p><br>
+            <!-------------------Button clicable qui deploie le formulaire d'insciption au clic-------------------------->
+            <a id="btnJeMinscris" href="{{ path('app_register') }}">Je m'inscris</a>
+        </div>
+    </div>
+    <!------------------------------------------Image connexion----------------------------------------------->
+    <figure>
+        <img class="imgConnex" src="http://localhost/soeureinement/img/photoConnexion2.png"
+            alt="Image connexion un prés vert">
+    </figure>
+</main>
+<!---------------------------------------------------"END OF  MAIN"-------------------------------------------->
 </form>
 {% endblock %}
